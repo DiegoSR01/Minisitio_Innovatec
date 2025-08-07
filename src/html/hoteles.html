@@ -1,0 +1,176 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7eef3] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#0e161b]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>
+            </div>
+            <h2 class="text-[#0e161b] text-lg font-bold leading-tight tracking-[-0.015em]">InnovaTecNM</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#0e161b] text-sm font-medium leading-normal" href="#">Inicio</a>
+              <a class="text-[#0e161b] text-sm font-medium leading-normal" href="#">Eventos</a>
+              <a class="text-[#0e161b] text-sm font-medium leading-normal" href="#">Hoteles</a>
+              <a class="text-[#0e161b] text-sm font-medium leading-normal" href="#">Restaurantes</a>
+              <a class="text-[#0e161b] text-sm font-medium leading-normal" href="#">Contacto</a>
+            </div>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#e7eef3] text-[#0e161b] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-[#0e161b]" data-icon="Globe" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM101.63,168h52.74C149,186.34,140,202.87,128,215.89,116,202.87,107,186.34,101.63,168ZM98,152a145.72,145.72,0,0,1,0-48h60a145.72,145.72,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.79a161.79,161.79,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154.37,88H101.63C107,69.66,116,53.13,128,40.11,140,53.13,149,69.66,154.37,88Zm19.84,16h38.46a88.15,88.15,0,0,1,0,48H174.21a161.79,161.79,0,0,0,0-48Zm32.16-16H170.94a142.39,142.39,0,0,0-20.26-45A88.37,88.37,0,0,1,206.37,88ZM105.32,43A142.39,142.39,0,0,0,85.06,88H49.63A88.37,88.37,0,0,1,105.32,43ZM49.63,168H85.06a142.39,142.39,0,0,0,20.26,45A88.37,88.37,0,0,1,49.63,168Zm101.05,45a142.39,142.39,0,0,0,20.26-45h35.43A88.37,88.37,0,0,1,150.68,213Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5uLWxSUWXpn397L90g055o8u0lGHLN9ySIIE7WOwVzMQUPTWL9j_bJ0uIpT8rwg_8tTHA1T1wptcgYvuFrPtIuVFela1RjUGHu2_8njMfcA1VKth8CncVTF9GYsLW00xtBZUT8dnzEVAt-5i3pmr1rQZkmrny7UBM0rvDOl-cPpYuGNpU1UkqDCq1t02xtcJPwUAd3SOwOYlHeE3udP8Kx_lD7rtQBq5dmeoarxF5eI1uQT10VUhuvVtvseGcQI_am5Le3mPJiBE");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-[#0e161b] tracking-light text-[32px] font-bold leading-tight min-w-72">Hoteles y Restaurantes Sugeridos</p>
+            </div>
+            <h2 class="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Hoteles</h2>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-lg border border-[#d0dee7] bg-slate-50">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-slate-50">
+                      <th class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-120 px-4 py-3 text-left text-[#0e161b] w-[400px] text-sm font-medium leading-normal">Nombre</th>
+                      <th class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-240 px-4 py-3 text-left text-[#0e161b] w-[400px] text-sm font-medium leading-normal">
+                        Dirección
+                      </th>
+                      <th class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-360 px-4 py-3 text-left text-[#0e161b] w-[400px] text-sm font-medium leading-normal">
+                        Teléfono
+                      </th>
+                      <th class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-480 px-4 py-3 text-left text-[#0e161b] w-[400px] text-sm font-medium leading-normal">Costos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#d0dee7]">
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e161b] text-sm font-normal leading-normal">
+                        Hotel Paraíso
+                      </td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        Calle Principal 123, Ciudad
+                      </td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-360 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">555-1234</td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-480 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        $50 - $100
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#d0dee7]">
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e161b] text-sm font-normal leading-normal">
+                        Hotel Sol y Luna
+                      </td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        Avenida Central 456, Ciudad
+                      </td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-360 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">555-5678</td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-480 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        $75 - $150
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#d0dee7]">
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e161b] text-sm font-normal leading-normal">
+                        Hotel Las Estrellas
+                      </td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        Plaza Mayor 789, Ciudad
+                      </td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-360 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">555-9012</td>
+                      <td class="table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-480 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        $100 - $200
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-120{display: none;}}
+                @container(max-width:240px){.table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-240{display: none;}}
+                @container(max-width:360px){.table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-360{display: none;}}
+                @container(max-width:480px){.table-6c8972f5-e021-40ec-91cc-29e185f8a738-column-480{display: none;}}
+              </style>
+            </div>
+            <h2 class="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Restaurantes</h2>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-lg border border-[#d0dee7] bg-slate-50">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-slate-50">
+                      <th class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-120 px-4 py-3 text-left text-[#0e161b] w-[400px] text-sm font-medium leading-normal">Nombre</th>
+                      <th class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-240 px-4 py-3 text-left text-[#0e161b] w-[400px] text-sm font-medium leading-normal">
+                        Dirección
+                      </th>
+                      <th class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-360 px-4 py-3 text-left text-[#0e161b] w-[400px] text-sm font-medium leading-normal">
+                        Teléfono
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#d0dee7]">
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e161b] text-sm font-normal leading-normal">
+                        Restaurante El Sabor
+                      </td>
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        Calle Secundaria 321, Ciudad
+                      </td>
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-360 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">555-4321</td>
+                    </tr>
+                    <tr class="border-t border-t-[#d0dee7]">
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e161b] text-sm font-normal leading-normal">
+                        Restaurante La Delicia
+                      </td>
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        Avenida Lateral 654, Ciudad
+                      </td>
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-360 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">555-8765</td>
+                    </tr>
+                    <tr class="border-t border-t-[#d0dee7]">
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e161b] text-sm font-normal leading-normal">
+                        Restaurante El Rincón
+                      </td>
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">
+                        Plaza Menor 987, Ciudad
+                      </td>
+                      <td class="table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-360 h-[72px] px-4 py-2 w-[400px] text-[#4e7a97] text-sm font-normal leading-normal">555-2109</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-120{display: none;}}
+                @container(max-width:240px){.table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-240{display: none;}}
+                @container(max-width:360px){.table-4e0c20e2-a08a-437a-8bee-b21f75d58978-column-360{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
