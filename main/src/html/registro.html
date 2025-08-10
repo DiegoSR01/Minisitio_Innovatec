@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS</title>
+
+    <link rel="website icon" type="png" href="../assets/icons/websiteIcon.png">
+    <link rel="stylesheet" href="../css/registro.css">
+    <script defer src="../js/registro.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="parallax"></div>
+    <div class="content-wrapper">
+        <!-- Encabezado -->
+        <header class="header">
+            <div class="logo">RAS ITTOL</div>
+            <nav class="navbar">
+                <a href="../html/index.html" class="active">
+                    <i class="fas fa-home"></i> 
+                INICIO</a>
+                <a href="../html/convocatorias.html" class="active">
+                    <i class="fas fa-bullhorn"></i>
+                CONVOCATORIAS</a>
+                <a href="../html/registro.html" class="active">
+                    <i class="fas fa-user-plus"></i>
+                REGISTRO</a>
+                <a href="../html/conocenos.html" class="active">
+                    <i class="fas fa-info-circle"></i>
+                CONOCENOS</a>
+            </nav>
+        </header>
+
+       <!-- Formulario -->
+       <main>
+            <div class="parallax"></div>
+            <section class="registro-container">
+                <h1>Registro</h1>
+                <form class="registro-form" action="../php/registro.php" method="post" autocomplete="off" onsubmit="return validarFormulario()">
+                    <!-- Por integrante -->
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad" required>
+
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="">Selecciona tu sexo</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <label for="institucion">Institución educativa:</label>
+                    <input type="text" id="institucion" name="institucion" placeholder="Ingresa tu institución educativa" required>
+
+                    <label for="carrera">Carrera o grado de estudios:</label>
+                    <input type="text" id="carrera" name="carrera" placeholder="Ingresa tu carrera o grado de estudios" required>
+
+                    <label for="identificacion">Copia de identificación oficial: (Subir solo si se requiere y solo PDF)</label>
+                    <input type="file" id="identificacion" name="identificacion" accept=".pdf">
+
+                    <!-- Por equipo -->
+                    <label for="nombre-equipo">Nombre del equipo:</label>
+                    <input type="text" id="nombre-equipo" name="nombre-equipo" placeholder="Ingresa el nombre del equipo" required>
+
+                    <!-- Selección de participantes -->
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecciona la categoría</option>
+                        <option value="Torneo de Minisumo">Torneo de Minisumo</option>
+                        <option value="Torneo Seguidor de línea">Torneo Seguidor de línea</option>
+                        <option value="Torneo de Carrera de Drones">Torneo de Carrera de Drones</option>
+                        <option value="Torneo de Legos">Torneo de Robótica de Legos</option>
+                    </select>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+
+                    <button type="submit" class="btn-registrar">Registrar</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-envelope"></i> ee.ras@toluca.tecnm.mx</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/RASittoluca?mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ras_ittol/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RAS ITTol. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
