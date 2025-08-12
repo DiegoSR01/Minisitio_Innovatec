@@ -1,17 +1,17 @@
 /* ==========================================================================
-   CSS  Convocatorias
+   CSS  Estancia
    ========================================================================== */
 :root {
     /* Colors */
     --primary-color: #1a1a1a;
     --secondary-color: #2c3e50;
-    --accent-color: #bc3ce7;
+    --accent-color: #bd9558;
     --success-color: #27ae60;
     --warning-color: #f39c12;
-    --info-color: #bc3ce7;
+    --info-color: #cc871f;
     
     /* Gradients */
-    --primary-gradient: linear-gradient(135deg, #4c1186 0%, #a24b91 100%);
+    --primary-gradient: linear-gradient(135deg, #0d163f 0%, #1b3b6c 100%);
     --hero-gradient: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.8) 50%);
     --card-gradient: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
     
@@ -244,7 +244,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url('../assets/icons/websiteIcon.png');
+    background-image: url('../assets/icons/bannerInnova.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -578,20 +578,20 @@ ul {
 }
 
 /* ==========================================================================
-   Convocatorias Grid
+   Estancia Grid
    ========================================================================== */
-.tournaments-section {
+.estancia-section {
     background: var(--card-gradient);
 }
 
-.convocatorias-grid {
+.estancia-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--spacing-xl);
     margin-top: var(--spacing-xl);
 }
 
-.convocatoria-card {
+.estancia-card {
     background: white;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-lg);
@@ -601,7 +601,7 @@ ul {
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.convocatoria-card:hover {
+.estancia-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: var(--shadow-xl);
 }
@@ -619,7 +619,7 @@ ul {
     transition: transform var(--transition-slow);
 }
 
-.convocatoria-card:hover .card-image {
+.estancia-card:hover .card-image {
     transform: scale(1.1);
 }
 
@@ -932,7 +932,7 @@ ul {
         align-items: center;
     }
     
-    .convocatorias-grid {
+    .estancia-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
     }
@@ -967,7 +967,7 @@ ul {
         justify-content: center;
     }
     
-    .convocatorias-grid {
+    .estancia-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
