@@ -19,6 +19,14 @@
         .loading-container {
             text-align: center;
             color: #333;
+            position: relative;
+        }
+
+        .preloader-image {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: fadeInOut 2s ease-in-out infinite;
         }
 
         .spinner {
@@ -36,6 +44,12 @@
             100% { transform: rotate(360deg); }
         }
 
+        @keyframes fadeInOut {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+
         .loading-text {
             font-size: 18px;
             font-weight: 300;
@@ -46,8 +60,9 @@
 </head>
 <body>
     <div class="loading-container">
+        <img src="src/assets/images/preloader_innovatec.png" alt="InnovaTECNM Logo" class="preloader-image">
         <div class="spinner"></div>
-        <div class="loading-text">loading</div>
+        <div class="loading-text">Cargando...</div>
     </div>
 
     <script>
