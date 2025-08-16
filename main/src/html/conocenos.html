@@ -11,7 +11,7 @@
     <meta name="author" content="">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/icons/websiteIcon.png">
+    <link rel="icon" type="image/png" href="../assets/icons/innovatec_icon.png">
     
     <!-- CSS -->
     <link rel="stylesheet" href="../css/index.css">
@@ -137,6 +137,63 @@
                             <img src="../assets/icons/ittol_escudo.png" alt="Imagen" loading="lazy">
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section id="ubicacion-ittoluca" aria-labelledby="mapa-itt" class="section">
+                <div class="container">
+                <style>
+                    /* Estilos solo para este section */
+                    #ubicacion-ittoluca {
+                        padding: 2rem 0;
+                        text-align: center;
+                    }
+                    #ubicacion-ittoluca h2 {
+                        margin-bottom: 2rem;
+                    }
+                    #ubicacion-ittoluca .mapa-wrapper {
+                        position: relative;
+                        padding-bottom: 56.25%; /* 16:9 */
+                        height: 0;
+                        overflow: hidden;
+                        border-radius: 16px;
+                        max-width: 800px;
+                        margin: 0 auto;
+                    }
+                    #ubicacion-ittoluca .mapa-wrapper iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 80%;
+                        height: 80%;
+                        border: 0;
+                    }
+                    #ubicacion-ittoluca .mapa-fallback {
+                        margin-top: 1rem;
+                        font-size: .95rem;
+                        text-align: center;
+                    }
+                </style>
+
+                <h2 id="mapa-itt">Instituto Tecnológico de Toluca — Ubicación</h2>
+
+                <div class="mapa-wrapper">
+                    <iframe
+                    src="https://www.google.com/maps?q=Instituto%20Tecnol%C3%B3gico%20de%20Toluca&output=embed"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    aria-label="Mapa de Google con la ubicación del Instituto Tecnológico de Toluca">
+                    </iframe>
+                </div>
+
+                <p class="mapa-fallback">
+                    Si el mapa no carga, 
+                    <a href="https://www.google.com/maps/search/?api=1&query=Instituto+Tecnol%C3%B3gico+de+Toluca" target="_blank" rel="noopener">
+                    ábrelo en Google Maps
+                    </a>.
+                </p>
                 </div>
             </section>
 
