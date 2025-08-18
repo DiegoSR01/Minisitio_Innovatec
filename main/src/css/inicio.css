@@ -410,10 +410,24 @@ ul {
     left: 0;
     width: 100%;
     height: 120%;
-    background: url('../assets/images/ras1.jpg') no-repeat center center/cover;
+    background: url('../assets/images/ittol3.jpg') no-repeat center center/cover;
     z-index: -2;
     will-change: transform;
 }
+
+/*En caso de que se requiera agregar otra imagen al hero banner: */
+
+.hero-bg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: url('../assets/icons/bannerInnova.jpg') no-repeat center center/cover;
+    z-index: -2;
+    will-change: transform;
+}
+/*fin del anexo extra*/
 
 .hero-overlay {
     position: absolute;
