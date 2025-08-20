@@ -211,6 +211,55 @@ function initMobileMenu() {
     });
 }
 
+/**
+ * Manejo de navegación activa
+ */
+function initActiveNavigation() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop() || 'inicio.html';
+    
+    // Mapeo de páginas a enlaces
+    const pageMap = {
+        'inicio.html': 'inicio.html',
+        'programa.html': 'programa.html',
+        'estancia.html': 'estancia.html',
+        'conocenos.html': 'conocenos.html',
+        'noticias.html': 'noticias.html'
+    };
+    
+    // Remover todas las clases active
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+    });
+    
+    // Agregar clase active al enlace correspondiente
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        const linkPage = href.split('/').pop();
+        
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'inicio.html')) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+    });
+    
+    // Manejar clicks en navegación
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Remover active de todos los enlaces
+            navLinks.forEach(l => {
+                l.classList.remove('active');
+                l.removeAttribute('aria-current');
+            });
+            
+            // Agregar active al enlace clickeado
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        });
+    });
+}
+
 // ==========================================================================
 // Sistema de Carrusel Avanzado
 // ==========================================================================
@@ -562,6 +611,7 @@ function init() {
     initHeaderEffects();
     initBackToTop();
     initMobileMenu();
+    initActiveNavigation();
     initSmoothScroll();
     
     // Carruseles
@@ -575,7 +625,7 @@ function init() {
     initLazyLoading();
     initErrorHandling();
     
-    console.log('🚀 RAS ITTOL - Sitio web inicializado correctamente');
+    console.log('🚀 InnovaTECNM 2025 - Sitio web inicializado correctamente');
 }
 
 /**
