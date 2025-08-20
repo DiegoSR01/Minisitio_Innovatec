@@ -127,6 +127,12 @@
                 </div>
             </section>
 
+            <!-- Barra de búsqueda -->  
+            <div class="search-bar-wrapper">
+                <input type="text" id="hotel-search" class="search-bar" placeholder="Buscar servicio..." aria-label="Buscar hotel">
+                <button class="search-btn" aria-label="Buscar"><i class="fas fa-search"></i></button>
+            </div>
+             
             <!-- Hoteles Section -->
             <section id="hoteles" class="estancia-section section">
                 <div class="container">
@@ -433,7 +439,36 @@
                         <div class="section-divider"></div>
                     </header>
                     
+                <!-- Hoteles filtrados dinámicamente -->
                     <div class="estancia-grid">
+            <!-- El CSS de la barra de búsqueda y hoteles filtrados se encuentra en conocenos.css -->
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const searchInput = document.getElementById('hotel-search');
+                const searchBtn = document.querySelector('.search-btn');
+                const hotelCards = document.querySelectorAll('#hoteles .estancia-card');
+
+                function filterHotels() {
+                    const query = searchInput.value.trim().toLowerCase();
+                    hotelCards.forEach(card => {
+                        const title = card.querySelector('.card-title').textContent.toLowerCase();
+                        const desc = card.querySelector('.card-description').textContent.toLowerCase();
+                        if (title.includes(query) || desc.includes(query)) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+
+                searchInput.addEventListener('input', filterHotels);
+                searchBtn.addEventListener('click', filterHotels);
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') filterHotels();
+                });
+            });
+            </script>
                         <!-- Por definir -->
                         <article class="estancia-card">
                             <!--<div class="card-image-container">

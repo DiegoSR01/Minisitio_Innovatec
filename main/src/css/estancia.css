@@ -1,3 +1,59 @@
+/* Barra de búsqueda y hoteles filtrados dinámicamente (estancia.html) - Forzado al final para prioridad */
+.search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 1.5rem 0;
+    gap: 0.5rem;
+    z-index: 10;
+}
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1.2rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.search-bar:focus {
+    border-color: #2c3e50;
+    box-shadow: 0 2px 12px rgba(30,136,229,0.08);
+}
+.search-btn {
+    background: var(--primary-gradient);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(30,136,229,0.08);
+}
+/* Hover igual que .btn-primary:hover */
+.search-btn:hover, .search-btn:focus {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: var(--shadow-xl);
+    outline: none;
+    transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+    .search-bar {
+        max-width: 220px;
+        font-size: 0.95rem;
+    }
+}
+
 /* ==========================================================================
    CSS  Estancia
    ========================================================================== */
@@ -543,6 +599,10 @@ ul {
         transform: translateX(-50%) translateY(-5px);
     }
 }
+
+
+
+
 
 /* ==========================================================================
    Section Styles
