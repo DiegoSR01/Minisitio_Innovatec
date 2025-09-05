@@ -11,10 +11,11 @@
     <meta name="author" content="">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/icons/websiteIcon.png">
+    <link rel="icon" type="image/png" href="../assets/icons/innovatec_icon.png">
     
     <!-- CSS -->
     <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/estancia.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,6 +25,7 @@
     
     <!-- JavaScript -->
     <script defer src="../js/inicio.js"></script>
+    <script defer src="../js/modal.js"></script>
 </head>
 
 <body>
@@ -108,7 +110,7 @@
                             </p>
                         </p>
                         <div class="hero-cta">
-                            <a href="../assets/documents/programaInnovaTECNM.pdf" target="_blank" class="btn btn-primary">
+                            <a href="javascript:void(0)" onclick="openModal('../assets/documents/programaInnovaTECNM.pdf', 'pdf')" class="btn btn-primary">
                                 <i class="fas fa-file-pdf"></i>
                                 Ver Programa
                             </a>
@@ -218,6 +220,13 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div id="fileModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-body"></div>
+        </div>
     </div>
 </body>
 </html>

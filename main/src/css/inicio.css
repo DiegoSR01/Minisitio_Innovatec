@@ -368,33 +368,79 @@ ul {
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
-    gap: 4px;
-    width: 30px;
-    height: 30px;
+    gap: 6px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
     justify-content: center;
     align-items: center;
+    background: transparent;
+    border-radius: var(--radius-md);
+    transition: background-color 0.3s ease;
+    z-index: 1100;
+}
+
+.mobile-menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hamburger {
-    width: 20px;
+    width: 25px;
     height: 2px;
     background: white;
-    transition: all var(--transition-normal);
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(8px) rotate(45deg);
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(2) {
     opacity: 0;
+    transform: translateX(-10px);
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ==========================================================================
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 26, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        transform: translateY(-150%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* ===========================================================================
    Hero Banner
    ========================================================================== */
 .hero-banner {
@@ -700,17 +746,9 @@ ul {
 /* ==========================================================================
    Intro Section
    ========================================================================== */
-.intro-section
-/*,
-.tournaments-section */{
+.intro-section{
     position: relative;
 }
-
-
-/*.tournaments-section {
-    background: var(--card-gradient);
-}*/
-
 
 /* ==========================================================================
    Carousel
@@ -846,14 +884,6 @@ ul {
     background: rgba(255, 255, 255, 0.8);
 }
 
-
-/* ==========================================================================
-   Extras para carousel mas pequeño
-   ========================================================================== */
-
-   
-
-
 /* ==========================================================================
    Back to Top Button
    ========================================================================== */
@@ -888,6 +918,7 @@ ul {
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
 }
+
 
 /* ==========================================================================
    Footer

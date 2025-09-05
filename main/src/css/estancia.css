@@ -424,30 +424,76 @@ ul {
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
-    gap: 4px;
-    width: 30px;
-    height: 30px;
+    gap: 6px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
     justify-content: center;
     align-items: center;
+    background: transparent;
+    border-radius: var(--radius-md);
+    transition: background-color 0.3s ease;
+    z-index: 1100;
+}
+
+.mobile-menu-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hamburger {
-    width: 20px;
+    width: 25px;
     height: 2px;
     background: white;
-    transition: all var(--transition-normal);
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(8px) rotate(45deg);
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(2) {
     opacity: 0;
+    transform: translateX(-10px);
 }
 
 .mobile-menu-btn.active .hamburger:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 26, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        transform: translateY(-150%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 /* ==========================================================================
@@ -1126,4 +1172,175 @@ ul {
     .section {
         page-break-inside: avoid;
     }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: var(--z-modal);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    max-width: 1400px;
+    max-height: 90vh;
+    margin: 20px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+    background: var(--primary-gradient);
+    padding: 1rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.modal-body {
+    flex: 1;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos específicos por tipo de contenido */
+.modal-body[data-type="pdf"] embed,
+.modal-body[data-type="pdf"] object {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.modal-body[data-type="image"] {
+    padding: 1rem;
+}
+
+.modal-body[data-type="image"] img {
+    max-width: 100%;
+    max-height: calc(90vh - 100px);
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-body[data-type="video"] {
+    padding: 1rem;
+    background: #000;
+}
+
+.modal-body[data-type="video"] video {
+    max-width: 100%;
+    max-height: calc(90vh - 100px);
+    width: auto;
+    height: auto;
+}
+
+/* Scrollbar personalizado para el modal */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--primary-gradient);
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 15px;
+    }
+
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 1rem;
+    }
+
+    .modal-body {
+        margin-top: 1.5rem;
+        padding: 0;
+    }
+
+    .modal-close {
+        top: 0.3rem;
+        right: 0.3rem;
+    }
+}
+
+/* Estilos actualizados para el botón de cerrar del modal */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close:active {
+    transform: rotate(90deg) scale(0.95);
 }

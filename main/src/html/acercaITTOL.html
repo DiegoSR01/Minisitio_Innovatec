@@ -11,10 +11,11 @@
     <meta name="author" content="">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/icons/innovatec_icon.png">
+    <link rel="icon" type="image/png" href="../assets/icons/innovatec_icon.pngg">
     
     <!-- CSS -->
     <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/estancia.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,6 +25,7 @@
     
     <!-- JavaScript -->
     <script defer src="../js/inicio.js"></script>
+    <script defer src="../js/modal.js"></script>
 </head>
 
 <body>
@@ -109,7 +111,7 @@
                         </p>
                         <p> <br></p>
                         <div class="hero-cta">
-                            <a href="../assets/documents/ittoluca.pdf" target="_blank" class="btn btn-primary">
+                            <a href="javascript:void(0)" onclick="openModal('../assets/documents/ittoluca.pdf', 'pdf')" class="btn btn-primary">
                                 <i class="fas fa-file-pdf"></i>
                                 Conoce más
                             </a>
@@ -156,14 +158,7 @@
                         <div class="carousel2-container">
                             <div class="carousel" data-carousel="projects">
                                 <div class="carousel-track">
-                                    <!--<div class="carousel-slide active">
-                                        <img src="../assets/icons/ittol_escudo.png" alt="Escudo ITTol" loading="lazy">
-                                        <div class="slide-content">
-                                            <h3>Escudo del ITTol</h3>
-                                            <p>Instituto Tecnológico de Toluca.</p>
-                                        </div>
-                                    </div>-->
-                                    <div class="carousel-slide">
+                                    <div class="carousel-slide active">
                                         <img src="../assets/images/ittol.jpg" alt="Instituto Tecnológico de Toluca" loading="lazy">
                                         <div class="slide-content active">
                                             <h3>ITTol</h3>
@@ -206,64 +201,6 @@
                     </div>
                 </div>
             </section> 
-
-            <!--
-            <section id="ubicacion-ittoluca" aria-labelledby="mapa-itt" class="section">
-                <div class="container">
-                <style>
-                    /* Estilos solo para este section */
-                    #ubicacion-ittoluca {
-                        padding: 2rem 0;
-                        text-align: center;
-                    }
-                    #ubicacion-ittoluca h2 {
-                        margin-bottom: 2rem;
-                    }
-                    #ubicacion-ittoluca .mapa-wrapper {
-                        position: relative;
-                        padding-bottom: 56.25%; /* 16:9 */
-                        height: 0;
-                        overflow: hidden;
-                        border-radius: 16px;
-                        max-width: 800px;
-                        margin: 0 auto;
-                    }
-                    #ubicacion-ittoluca .mapa-wrapper iframe {
-                        position: absolute;
-                        top: 0;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 80%;
-                        height: 80%;
-                        border: 0;
-                    }
-                    #ubicacion-ittoluca .mapa-fallback {
-                        margin-top: 1rem;
-                        font-size: .95rem;
-                        text-align: center;
-                    }
-                </style>
-
-                <h2 id="mapa-itt">Instituto Tecnológico de Toluca — Ubicación</h2>
-
-                <div class="mapa-wrapper">
-                    <iframe
-                    src="https://www.google.com/maps?q=Instituto%20Tecnol%C3%B3gico%20de%20Toluca&output=embed"
-                    loading="lazy"
-                    allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade"
-                    aria-label="Mapa de Google con la ubicación del Instituto Tecnológico de Toluca">
-                    </iframe>
-                </div>
-
-                <p class="mapa-fallback">
-                    Si el mapa no carga, 
-                    <a href="https://www.google.com/maps/search/?api=1&query=Instituto+Tecnol%C3%B3gico+de+Toluca" target="_blank" rel="noopener">
-                    ábrelo en Google Maps
-                    </a>.
-                </p>
-                </div>
-            </section>-->
 
         </main>
 
@@ -330,6 +267,13 @@
                 </div>
             </div>
         </footer>
+
+        <div id="fileModal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal()">×</button>
+                <div class="modal-body"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

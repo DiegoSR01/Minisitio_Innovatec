@@ -11,10 +11,12 @@
     <meta name="author" content="">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/icons/websiteIcon.png">
+    <link rel="icon" type="image/png" href="../assets/icons/innovatec_icon.png">
     
     <!-- CSS -->
+    <link rel="stylesheet" href="../css/inicio.css">
     <link rel="stylesheet" href="../css/estancia.css">
+    
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,7 +25,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- JavaScript -->
-    <script defer src="../js/convocatorias.js"></script>
+    <script defer src="../js/inicio.js"></script>
+    <script defer src="../js/modal.js"></script>
 </head>
 
 <body>
@@ -109,14 +112,6 @@
                             Tecnológico de Toluca para una estancia cómoda y segura durante el evento InnovaTECNM 2025.
                         </p>
                         <div class="hero-cta">
-                            <!--<a href="../assets/documents/convocatoria_2025.pdf" target="_blank" class="btn btn-primary">
-                                <i class="fas fa-file-pdf"></i>
-                                Ver Convocatoria
-                            </a>
-                            <a href="../assets/documents/reglamento_general_2025.pdf" target="_blank" class="btn btn-outline">
-                                <i class="fas fa-book"></i>
-                                Reglas Generales
-                            </a>-->
                             <a href="#hoteles" class="btn btn-primary">Hoteles</a>
                             <a href="#restaurantes" class="btn btn-primary">Restaurantes</a>
                             <a href="#s_med" class="btn btn-primary">Servicios Médicos</a>
@@ -142,7 +137,7 @@
                     <header class="section-header">
                         <h2 class="section-title">Hoteles</h2>
                         <div class="hero-cta">
-                            <a href="../assets/documents/hoteles_innovatecnm_ittol.pdf" target="_blank" class="btn btn-primary">
+                            <a href="javascript:void(0)" onclick="openModal('../assets/documents/hoteles_innovatecnm_ittol.pdf', 'pdf')" class="btn btn-primary">
                                 <i class="fas fa-file-pdf"></i>
                                 Hoteles Sugeridos
                             </a>
@@ -175,7 +170,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelRadisson.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelRadisson.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -203,7 +198,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelOneToluca.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelOneToluca.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -231,7 +226,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelSanFrancisco.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelSanFrancisco.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -259,7 +254,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelLaQuinta.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelLaQuinta.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -286,7 +281,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelLaMuralla.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelLaMuralla.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -314,15 +309,15 @@
                                 </p>
                                 
                                 <div class="card-actions" style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
-                                    <a href="../assets/documents/hotelGamma.pdf" target="_blank" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelGamma.pdf', 'pdf')" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
-                                    <a href="../assets/images/hotelGamma.png" target="_blank" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/images/hotelGamma.png', 'image')" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
                                         <i class="fas fa-info-circle"></i>
                                         Información
                                     </a>
-                                    <a href="../assets/videos/hotelGamma.mp4" target="_blank" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/videos/hotelGamma.mp4', 'video')" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
                                         <i class="fas fa-info-circle"></i>
                                         Video
                                     </a>
@@ -345,20 +340,20 @@
                                 </h3>
                                 <p class="card-description">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    Calle Industria Minera 503 Colonia San Lorenzo Tepaltitlan, Delegación San Lorenzo Tepaltitlán, 
+                                    Calle Industria Minera 503 Colonia San Lorenzo Tepaltitlán, Delegación San Lorenzo Tepaltitlán, 
                                     50010 Toluca de Lerdo, Méx.
                                 </p>
                                 
                                 <div class="card-actions" style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
-                                    <a href="../assets/documents/hotelDoubleTreeH.pdf" target="_blank" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelDoubleTreeH.pdf', 'pdf')" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
-                                    <a href="../assets/images/hotelDoubleTree.png" target="_blank" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/images/hotelDoubleTree.png', 'image')" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
                                         <i class="fas fa-info-circle"></i>
                                         Información
                                     </a>
-                                    <a href="../assets/videos/hotelDoubleTree.mp4" target="_blank" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/videos/hotelDoubleTree.mp4', 'video')" class="btn btn-primary" style="width: 60%; text-align: center; font-size: 0.85em; padding: 6px 12px;">
                                         <i class="fas fa-info-circle"></i>
                                         Video
                                     </a>
@@ -385,7 +380,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelCourtyard.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelCourtyard.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -413,7 +408,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelCityExpress.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelCityExpress.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -441,7 +436,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelBiohotel.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelBiohotel.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -469,7 +464,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelHolidayInn.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelHolidayInn.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -497,7 +492,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/hotelConcorde.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/hotelConcorde.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -521,6 +516,7 @@
                     
                 <!-- Hoteles filtrados dinámicamente -->
                     <div class="estancia-grid">
+                        
             <!-- El CSS de la barra de búsqueda y hoteles filtrados se encuentra en conocenos.css -->
 
             <script>
@@ -568,7 +564,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/restaurante.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -610,7 +606,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/servicios_medicos.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-info-circle"></i>
                                         Más detalles
                                     </a>
@@ -684,6 +680,14 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Modal -->
+        <div id="fileModal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeModal()">×</button>
+                <div class="modal-body"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

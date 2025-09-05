@@ -15,6 +15,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/estancia.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,6 +25,7 @@
     
     <!-- JavaScript -->
     <script defer src="../js/inicio.js"></script>
+    <script defer src="../js/modal.js"></script>
 </head>
 
 <body>
@@ -227,7 +229,7 @@
                                 </p>
                                 
                                 <div class="card-actions">
-                                    <a href="../assets/documents/croquis_InnovaTECNM.pdf" target="_blank" class="btn btn-primary">
+                                    <a href="javascript:void(0)" onclick="openModal('../assets/documents/croquis_InnovaTECNM.pdf', 'pdf')" class="btn btn-primary">
                                         <i class="fas fa-file-pdf"></i>
                                         Ver Croquis
                                     </a>
@@ -237,60 +239,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Intro section  -->
-            <!--
-            <section id="intro" class="projects-section section">
-                <div class="container">
-                    <div class="carousel-container">
-                        <div class="carousel" data-carousel="projects">
-                            <div class="carousel-track">
-                                <div class="carousel-slide active">
-                                    <img src="../assets/icons/ittol_escudo.png" alt="Evento 1" loading="lazy">
-                                    <div class="slide-content">
-                                        <h3>Escudo del ITTol</h3>
-                                        <p>Instituto Tecnológico de Toluca.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../assets/images/logo51aniversario.jpg" alt="Evento 2" loading="lazy">
-                                    <div class="slide-content">
-                                        <h3>51 Aniversario</h3>
-                                        <p>Aniversario del Instituto Tecnológico de Toluca</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../assets/icons/innovatec_icon.png" alt="Evento 3" loading="lazy">
-                                    <div class="slide-content">
-                                        <h3>InnovaTECNM 2025</h3>
-                                        <p>Etapa Regional.</p>
-                                    </div>
-                                </div>
-                            </div>
-            -->
-                            
-                            <!-- Carousel controls -->
-            <!--
-                            <button class="carousel-btn carousel-btn-prev" aria-label="Imagen anterior">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-btn carousel-btn-next" aria-label="Siguiente imagen">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-            -->                
-                            <!-- Carousel indicators -->
-            <!--                                 
-                            <div class="carousel-indicators">
-                                <button class="indicator active" data-slide="0" aria-label="Ir a imagen 1"></button>
-                                <button class="indicator" data-slide="1" aria-label="Ir a imagen 2"></button>
-                                <button class="indicator" data-slide="2" aria-label="Ir a imagen 3"></button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>   
-        -->
         </main>
 
         <!-- Back to top button -->
@@ -355,6 +303,13 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div id="fileModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-body"></div>
+        </div>
     </div>
 </body>
 </html>
