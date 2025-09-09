@@ -11,7 +11,9 @@
     --info-color: #cc871f;
     
     /* Gradients */
-    --primary-gradient: linear-gradient(135deg, #0d163f 0%, #1b3b6c 100%);
+    --primary-gradient: linear-gradient(135deg, #0d163f 0%, #1b3b6c 100%); /* Para botones */
+    --second-gradient: linear-gradient(135deg, #ffffff 0%, #c8c8c8 100%);   /* Para header oficial */
+    --third-gradient: linear-gradient(135deg, #070e2c 0%, #162e65 100%);    /* Para header general, un poco mas oscurto que el de botones */
     --hero-gradient: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.8) 50%);
     --card-gradient: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
     
@@ -142,7 +144,7 @@ ul {
    Estilos para el header oficial
    ========================================================================== */
 .official-header {
-    background: var(--primary-gradient);
+    background: var(--second-gradient);
     padding: 8px 0;
     border-bottom: 3px solid var(--accent-color);
     position: relative;
@@ -269,7 +271,8 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(26, 26, 26, 0.95);
+    background: var(--third-gradient);
+    /*background: rgba(26, 26, 26, 0.95);*/
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: var(--z-fixed);
