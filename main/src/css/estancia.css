@@ -1179,7 +1179,7 @@ ul {
 
 /* Estilos para el modal */
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -1189,14 +1189,22 @@ ul {
     z-index: var(--z-modal);
     backdrop-filter: blur(8px);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .modal.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
     opacity: 1;
 }
 
@@ -1213,6 +1221,9 @@ ul {
     flex-direction: column;
     overflow: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .modal-header {
